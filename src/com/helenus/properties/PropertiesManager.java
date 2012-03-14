@@ -12,7 +12,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
-*/
+ */
 package com.helenus.properties;
 
 import java.io.FileNotFoundException;
@@ -32,8 +32,8 @@ public final class PropertiesManager {
     private static final PropertiesManager MANAGER = new PropertiesManager();
 
     /**
-     * Default capacity of the cache, increase it in case we have more
-     * properties to handle, just look at {@link PropType}.
+     * Default capacity of the cache, increase it in case we have more properties to handle, just look at
+     * {@link PropType}.
      */
     private static final int CAPACITY = 4;
 
@@ -75,8 +75,7 @@ public final class PropertiesManager {
     }
 
     /**
-     * Inner class to define and provide a handler to the properties file in the
-     * file system.
+     * Inner class to define and provide a handler to the properties file in the file system.
      * <p>
      * The properties file should be accessible through the CLASSPATH.
      * 
@@ -92,8 +91,7 @@ public final class PropertiesManager {
          * Create a new properties handler.
          * 
          * @param fileName
-         *            the name of the properties file, should be in the
-         *            CLASSPATH
+         *            the name of the properties file, should be in the CLASSPATH
          */
         public PropertiesHandler(final String fileName) {
             properties = new Properties();
@@ -104,16 +102,12 @@ public final class PropertiesManager {
                 properties.load(in);
             } catch (final FileNotFoundException ex) {
                 // TODO add logger
-                ex.printStackTrace();
                 // We should never, ever, ever get here!
-                // MLogger.getLogger().debug("Impossible to find '{}' properties file in the PATH",
-                // fileName, ex);
+                ex.printStackTrace();
             } catch (final IOException ex) {
                 // TODO add logger
-                ex.printStackTrace();
                 // Nor here!
-                // MLogger.getLogger().debug("Error loading the properties from the '{}' file",
-                // fileName, ex);
+                ex.printStackTrace();
             } finally {
                 try {
                     if (in != null) {
@@ -122,14 +116,13 @@ public final class PropertiesManager {
                 } catch (final IOException ex) {
                     // TODO logger
                     ex.printStackTrace();
-                    // MLogger.getLogger().debug("Error closing stream", ex);
                 }
             }
         }
 
         /*
          * (non-Javadoc)
-         * @see com.mymed.properties.IProperties#get(java.lang.String)
+         * @see com.helenus.properties.IProperties#get(java.lang.String)
          */
         @Override
         public String get(final String key) {
