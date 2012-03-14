@@ -1,0 +1,8 @@
+bin/
+.checkstile
+.pmd
+.classpath
+.project
+.codepro/
+.settings
+.checkstyle

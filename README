@@ -1,0 +1,16 @@
+Simple library to provide high-level access to Cassandra.
+
+Aims of the project are:
+ * Provide mechanism to read configuration from existing Cassandra
+   configuration file, or via custom YAML-based Helenus configuration file
+ * Provide nodes based pooling mechanism, connection pools are per node
+ * Provide an high-level library to access Cassandra, via Thrift and CQL
+
+Dependencies (at the moment):
+ * snakeyaml
+
+License: Apache License v2.0
+
+WARNIG: this is a work in progress, developped on a spare time basis. Small
+parts of the project have been developped at this time.
+Things might change, and broke! There be dragons in here!

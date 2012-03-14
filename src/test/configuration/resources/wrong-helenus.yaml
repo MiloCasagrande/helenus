@@ -1,0 +1,17 @@
+# The IP address or URL of the nodes in the ring
+nodes:
+
+# The JMX port associated with the ring
+jmx_port: 8080
+
+# The RPC port to communicate in the ring
+rpc_port: 4201
+
+# The name of the default keyspace to use
+keyspace: Keyspace
+
+# The default name of the cluster ring
+cluster_name: 'Test cluster'
+
+# The log directory
+log_directory: /var/log/helenus

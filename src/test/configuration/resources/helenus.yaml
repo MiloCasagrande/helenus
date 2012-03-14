@@ -1,0 +1,28 @@
+# The IP address or URL of the nodes in the ring. It is also possible to specify
+# this addresses also with their own port, in the form of IP:PORT, or URL:PORT.
+# The PORT value will be used as the 'rpc_port' for the node.
+# WARNING: if you specify also the 'rpc_port' value later in this file, that
+# value will be used in the configuration of the nodes, voiding the PORT defined
+# here!
+nodes:
+ - 127.0.0.1
+ - 127.0.1.1
+ - 127.0.1.2:4202
+
+# The JMX port associated with the ring
+jmx_port: 8080
+
+# The RPC port to communicate in the ring
+rpc_port: 4201
+
+# The name of the default keyspace to use
+keyspace: Keyspace
+
+# The default name of the cluster ring
+cluster_name: 'Test cluster'
+
+# The initial capacity of nodes pool
+nodes_capacity: 32
+
+# The log directory
+log_directory: /var/log/helenus
